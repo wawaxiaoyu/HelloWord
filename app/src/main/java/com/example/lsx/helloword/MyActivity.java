@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -39,10 +41,12 @@ public class MyActivity extends AppCompatActivity {
             }
         });
         Button button = (Button) findViewById(R.id.content_my_button);
+        final EditText editText =(EditText) findViewById(R.id.edit_message);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("lsx", "xxxxxxxxxxxxxxxxxxxx");
+                editText.setText("button clicked");
             }
         });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
